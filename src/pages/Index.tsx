@@ -7,6 +7,7 @@ import { PatientRegistration } from "@/components/patients/PatientRegistration"
 import { PatientList } from "@/components/patients/PatientList"
 import { AppointmentScheduling } from "@/components/appointments/AppointmentScheduling"
 import { MedicalRecords } from "@/components/records/MedicalRecords"
+import { FloatingChatWidget } from "@/components/chat/FloatingChatWidget"
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState("dashboard")
@@ -21,10 +22,10 @@ const Index = () => {
               <p className="text-muted-foreground">Welcome back! Here's what's happening with your patients today.</p>
             </div>
             <DashboardCards />
+                <FloatingChatWidget/> 
             <div className="grid gap-6 lg:grid-cols-2">
               <RecentActivity />
               <div className="space-y-6">
-                {/* Additional dashboard widgets can go here */}
               </div>
             </div>
           </div>
@@ -42,6 +43,7 @@ const Index = () => {
           <div className="space-y-6 animate-fade-in">
             <DashboardCards />
             <RecentActivity />
+            
           </div>
         )
     }
